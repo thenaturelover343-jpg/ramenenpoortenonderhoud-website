@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head><body>
-<nav><div class="container nav-inner"><a class="brand" href="index.html">thuisonderhoud.be</a><div class="nav-links"><a href="index.html">Home</a><a href="index.html#diensten">Diensten</a><a href="index.html#voordelen">Waarom wij</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a></div><a class="nav-cta" href="tel:+32000000000">Bel nu</a></div></nav>
+<nav><div class="container nav-inner"><a class="brand" href="index.html">thuisonderhoud.be</a><button class="nav-toggle" type="button" aria-label="Menu openen" aria-expanded="false">☰</button><div class="nav-shell"><div class="nav-links"><div class="nav-item"><a href="index.html">Home</a></div><div class="nav-item has-dropdown"><button type="button">Diensten</button><div class="nav-dropdown"><a href="ramen-en-lijsten.html">Ramenreiniging</a><a href="deuren-en-poorten.html">Deuren en poorten reiniging</a><a href="zonnepanelen.html">Zonnepanelen reinigen</a><a href="dak-en-dakgoot.html">Dak en dakgoot onderhoud</a><a href="trappen-en-traphallen.html">Trap en traphallen onderhoud</a><a href="rolluiken.html">Rolluiken onderhoud</a><a href="contact.html">Offerte aanvragen</a></div></div><div class="nav-item"><a href="index.html#voordelen">Waarom wij</a></div><div class="nav-item"><a href="index.html#faq">FAQ</a></div><div class="nav-item"><a href="contact.html">Contact</a></div></div><a class="nav-cta" href="tel:+32000000000">Bel nu</a></div></div></nav>
 <main>
 <section class="page-hero"><div class="container">
 <h1>Zonnepanelen die opnieuw doen waarvoor ze er liggen.</h1>
@@ -34,4 +34,4 @@
 </div></section>
 </main>
 <footer><div class="container">thuisonderhoud.be — professionele reiniging en onderhoud</div></footer>
-</body></html>
+<script>const navToggle=document.querySelector('.nav-toggle');const navShell=document.querySelector('.nav-shell');const dropdownButton=document.querySelector('.nav-item.has-dropdown > button');const dropdownItem=document.querySelector('.nav-item.has-dropdown');if(navToggle&&navShell){navToggle.addEventListener('click',()=>{const open=navShell.classList.toggle('open');navToggle.setAttribute('aria-expanded',open?'true':'false');});}if(dropdownButton&&dropdownItem&&window.innerWidth<=980){dropdownButton.addEventListener('click',()=>{dropdownItem.classList.toggle('open');});}</script></body></html>
