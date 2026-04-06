@@ -596,6 +596,7 @@ footer {
   }
   .hero-panel {
     min-height: 320px;
+    width: 100%;
     padding: 24px;
     border-radius: 20px;
   }
@@ -609,6 +610,13 @@ footer {
     width: 100%;
     text-align: center;
     display: block;
+  }
+  .page-hero .container,
+  .hero .container {
+    width: min(100% - 24px, var(--container));
+  }
+  h2 {
+    letter-spacing: -1.2px;
   }
   .card,
   .step,
