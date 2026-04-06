@@ -585,7 +585,7 @@ footer {
   }
   .hero-banner {
     min-height: 0;
-    padding: 28px 24px 24px;
+    padding: 28px 24px 40px;
     border-radius: 20px;
     align-items: flex-start;
   }
