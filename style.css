@@ -202,6 +202,9 @@ h1 {
 .hero-panel-roof {
   background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/dak-dakgoot-hero.jpg') center center / cover no-repeat !important;
 }
+.hero-panel-stairs {
+  background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/trappen-hero.jpg') center center / cover no-repeat !important;
+}
 .hero-visible-img {
   display: none;
 }
@@ -700,6 +703,9 @@ footer {
   }
   .hero-panel-roof {
     background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/dak-dakgoot-hero.jpg') center center / cover no-repeat !important;
+  }
+  .hero-panel-stairs {
+    background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/trappen-hero.jpg') center center / cover no-repeat !important;
   }
   .page-hero h1 {
     font-size: clamp(30px, 10vw, 44px);
