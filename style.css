@@ -182,11 +182,15 @@ h1 {
   border: 1px solid rgba(255,255,255,0.08);
 }
 .page-hero-window-cleaning,
-.page-hero-doors {
+.page-hero-doors,
+.page-hero-windows {
   padding: 28px 0 42px;
 }
 .hero-panel-doors {
   background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat !important;
+}
+.hero-panel-windows {
+  background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/window-cleaning-hero.jpg') center center / cover no-repeat !important;
 }
 .hero-visible-img {
   display: none;
@@ -194,28 +198,6 @@ h1 {
 .hero-panel-text {
   position: relative;
   z-index: 2;
-}
-.hero-panel-window-cleaning-wrap {
-  min-height: 420px;
-  display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--ring), var(--shadow-float);
-  border: 1px solid rgba(255,255,255,0.08);
-  background: #050505;
-}
-.hero-panel-window-cleaning-image {
-  min-height: 420px;
-  background: url('assets/window-cleaning-hero.jpg') center center / cover no-repeat;
-}
-.hero-panel-window-cleaning-content {
-  min-height: 420px;
-  padding: 42px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: linear-gradient(180deg, rgba(8,8,8,0.82) 0%, rgba(0,0,0,0.96) 100%);
 }
 .eyebrow {
   display: inline-block;
@@ -697,21 +679,11 @@ footer {
     border-radius: 20px;
     background-position: 70% center;
   }
-  .hero-panel-window-cleaning-wrap {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-  .hero-panel-window-cleaning-image {
-    display: block;
-    min-height: 250px;
-    background-position: center center;
-  }
-  .hero-panel-window-cleaning-content {
-    min-height: 0;
-    padding: 24px;
-  }
   .hero-panel-doors {
     background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat !important;
+  }
+  .hero-panel-windows {
+    background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/window-cleaning-hero.jpg') center center / cover no-repeat !important;
   }
   .page-hero h1 {
     font-size: clamp(30px, 10vw, 44px);
