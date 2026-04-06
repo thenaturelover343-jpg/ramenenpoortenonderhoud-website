@@ -246,11 +246,11 @@
       gap: 18px;
     }
     .card {
-      background: var(--surface);
-      border-radius: var(--radius-card);
-      padding: 22px;
-      box-shadow: var(--ring);
-      border: 1px solid rgba(255,255,255,0.04);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(9,9,9,1) 100%);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--ring), var(--shadow-float);
+      border: 1px solid rgba(255,255,255,0.05);
     }
     .card-kicker {
       color: var(--accent);
@@ -314,10 +314,11 @@
     }
 
     .cta-wrap {
-      background: var(--surface);
-      border-radius: 20px;
-      padding: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(9,9,9,1) 100%);
+      border-radius: 24px;
+      padding: 30px;
       box-shadow: var(--ring), var(--shadow-float);
+      border: 1px solid rgba(255,255,255,0.05);
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 20px;
@@ -327,9 +328,10 @@
 
     .contact-box {
       background: rgba(255,255,255,0.04);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: 18px;
+      padding: 22px;
       border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: var(--ring);
     }
     .contact-box ul {
       list-style: none;
