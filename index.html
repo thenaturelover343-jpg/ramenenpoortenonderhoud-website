@@ -4,452 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thuisonderhoud | Reiniging en onderhoud van ramen, poorten, daken en meer</title>
-  <meta name="description" content="Professionele reiniging en onderhoud van ramen, deuren, poorten, zonnepanelen, daken, dakgoten, rolluiken en traphallen in België." />
+  <meta name="description" content="Professionele reiniging en onderhoud van ramen, deuren, poorten, zonnepanelen, daken, dakgoten, rolluiken en traphallen in heel België." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="thuisonderhoud.be" />
+  <meta property="og:title" content="Thuisonderhoud | Reiniging en onderhoud van ramen, poorten, daken en meer" />
+  <meta property="og:description" content="Professionele reiniging en onderhoud van ramen, deuren, poorten, zonnepanelen, daken, dakgoten, rolluiken en traphallen in heel België." />
+  <meta property="og:image" content="https://thuisonderhoud.be/assets/hero-clean.jpg" />
+  <meta property="og:url" content="https://thuisonderhoud.be/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://thuisonderhoud.be/" />
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #000000;
-      --surface: #090909;
-      --text: #ffffff;
-      --muted: #a6a6a6;
-      --accent: #0099ff;
-      --accent-ring: rgba(0, 153, 255, 0.15);
-      --frost: rgba(255, 255, 255, 0.1);
-      --frost-hover: rgba(255, 255, 255, 0.16);
-      --radius-card: 14px;
-      --radius-pill: 999px;
-      --container: 1180px;
-      --shadow-float: rgba(255, 255, 255, 0.1) 0px 0.5px 0px 0.5px, rgba(0, 0, 0, 0.25) 0px 10px 30px;
-      --ring: rgba(0, 153, 255, 0.15) 0px 0px 0px 1px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', system-ui, sans-serif;
-      line-height: 1.45;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(100% - 32px, var(--container)); margin: 0 auto; }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(0,0,0,0.92);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      backdrop-filter: blur(8px);
-    }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 16px;
-    }
-    .brand {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-    }
-    .nav-shell {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 15px;
-      align-items: center;
-    }
-    .nav-item {
-      position: relative;
-    }
-    .nav-item > a,
-    .nav-item > button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: none;
-      border: 0;
-      color: inherit;
-      font: inherit;
-      cursor: pointer;
-    }
-    .nav-item.has-dropdown > button::after {
-      content: '▾';
-      font-size: 12px;
-      color: #d9d9d9;
-    }
-    .nav-dropdown {
-      position: absolute;
-      top: calc(100% + 14px);
-      left: 0;
-      min-width: 300px;
-      background: rgba(12,12,12,0.98);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 12px;
-      box-shadow: var(--ring), var(--shadow-float);
-      display: none;
-      z-index: 60;
-    }
-    .nav-dropdown a {
-      display: block;
-      padding: 12px 14px;
-      border-radius: 12px;
-      color: #f2f2f2;
-    }
-    .nav-dropdown a:hover {
-      background: rgba(255,255,255,0.08);
-    }
-    .nav-item:hover .nav-dropdown,
-    .nav-item:focus-within .nav-dropdown,
-    .nav-item.open .nav-dropdown {
-      display: block;
-    }
-    .nav-toggle {
-      display: none;
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.06);
-      color: #fff;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      cursor: pointer;
-    }
-    .nav-cta {
-      padding: 11px 18px;
-      border-radius: var(--radius-pill);
-      background: #fff;
-      color: #000;
-      font-size: 14px;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .hero {
-      padding: 28px 0 42px;
-    }
-    .hero-banner {
-      position: relative;
-      min-height: 620px;
-      border-radius: 24px;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      padding: 42px;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.72) 72%, rgba(0,0,0,0.86) 100%),
-        url('assets/hero-clean.jpg') center center / cover no-repeat;
-      box-shadow: var(--ring), var(--shadow-float);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .hero-copy {
-      max-width: 640px;
-    }
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 8px 14px;
-      border-radius: var(--radius-pill);
-      background: rgba(255,255,255,0.12);
-      color: #f1f1f1;
-      font-size: 13px;
-      box-shadow: var(--ring);
-    }
-    h1 {
-      font-size: clamp(42px, 8vw, 88px);
-      line-height: 0.92;
-      letter-spacing: -3px;
-      font-weight: 700;
-      max-width: 760px;
-    }
-    .hero p {
-      margin-top: 18px;
-      max-width: 560px;
-      color: rgba(255,255,255,0.84);
-      font-size: 18px;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      margin-top: 28px;
-      flex-wrap: wrap;
-    }
-    .btn-primary,
-    .btn-secondary {
-      padding: 14px 22px;
-      border-radius: var(--radius-pill);
-      font-weight: 600;
-      font-size: 15px;
-      transition: 0.2s ease;
-    }
-    .btn-primary {
-      background: #fff;
-      color: #000;
-    }
-    .btn-secondary {
-      background: var(--frost);
-      color: #fff;
-      box-shadow: var(--ring);
-    }
-    .btn-secondary:hover { background: var(--frost-hover); }
-
-    section {
-      padding: 42px 0;
-    }
-    .section-alt {
-      padding-top: 18px;
-    }
-    .section-compact {
-      padding-top: 18px;
-      padding-bottom: 54px;
-    }
-    .section-label {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-    h2 {
-      font-size: clamp(30px, 5vw, 56px);
-      line-height: 0.96;
-      letter-spacing: -2px;
-      font-weight: 700;
-      max-width: 820px;
-      margin-bottom: 16px;
-    }
-    .section-intro {
-      color: var(--muted);
-      max-width: 700px;
-      font-size: 17px;
-      margin-bottom: 28px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(9,9,9,1) 100%);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: var(--ring), var(--shadow-float);
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-    .card-kicker {
-      color: var(--accent);
-      font-size: 12px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    .card h3 {
-      font-size: 24px;
-      line-height: 1.08;
-      letter-spacing: -1px;
-      margin-bottom: 10px;
-    }
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .feature-band {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .feature-pill {
-      padding: 18px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      box-shadow: var(--ring);
-    }
-    .feature-pill strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 16px;
-      letter-spacing: -0.3px;
-    }
-    .feature-pill span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 14px;
-    }
-    .faq-item {
-      background: var(--surface);
-      border-radius: 14px;
-      padding: 18px 20px;
-      box-shadow: var(--ring);
-    }
-    .faq-item strong {
-      display: block;
-      font-size: 17px;
-      margin-bottom: 8px;
-      letter-spacing: -0.3px;
-    }
-    .faq-item p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .cta-wrap {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(9,9,9,1) 100%);
-      border-radius: 24px;
-      padding: 30px;
-      box-shadow: var(--ring), var(--shadow-float);
-      border: 1px solid rgba(255,255,255,0.05);
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: center;
-    }
-    .cta-wrap p { color: var(--muted); font-size: 16px; margin-top: 12px; }
-
-    .contact-box {
-      background: rgba(255,255,255,0.04);
-      border-radius: 18px;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: var(--ring);
-    }
-    .contact-box ul {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .contact-box li strong {
-      color: #fff;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    footer {
-      padding: 28px 0 40px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 980px) {
-      .cta-wrap,
-      .cards,
-      .feature-band {
-        grid-template-columns: 1fr;
-      }
-      .nav-inner {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-      }
-      .nav-shell {
-        width: 100%;
-        grid-column: 1 / -1;
-        order: 3;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 14px;
-        padding: 14px 0 6px;
-      }
-      .nav-shell.open {
-        display: flex;
-      }
-      .nav-toggle {
-        display: inline-flex;
-      }
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-        width: 100%;
-      }
-      .nav-item { width: 100%; }
-      .nav-item > a,
-      .nav-item > button {
-        width: 100%;
-        justify-content: space-between;
-        padding: 14px 16px;
-        border-radius: 14px;
-        background: rgba(255,255,255,0.05);
-        color: #f2f2f2;
-      }
-      .nav-dropdown {
-        position: static;
-        min-width: 0;
-        margin-top: 8px;
-      }
-      .nav-item:not(.open) .nav-dropdown {
-        display: none;
-      }
-      .nav-cta {
-        width: 100%;
-        text-align: center;
-        display: inline-flex;
-        justify-content: center;
-      }
-      h1 {
-        font-size: clamp(34px, 11vw, 52px);
-        letter-spacing: -1.8px;
-      }
-      h2 { letter-spacing: -1.2px; }
-      .hero {
-        padding-top: 20px;
-        padding-bottom: 30px;
-      }
-      .hero-banner {
-        min-height: 420px;
-        padding: 24px;
-        border-radius: 20px;
-      }
-      .hero p {
-        font-size: 16px;
-      }
-      .hero-actions {
-        gap: 10px;
-      }
-      .btn-primary,
-      .btn-secondary {
-        width: 100%;
-        text-align: center;
-      }
-      .card,
-      .cta-wrap,
-      .contact-box {
-        border-radius: 16px;
-      }
-      .card,
-      .contact-box {
-        padding: 20px;
-      }
-      .cta-wrap {
-        padding: 22px;
-      }
-      .section-compact { padding-bottom: 42px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "thuisonderhoud.be",
+    "description": "Professionele reiniging en onderhoud van ramen, deuren, poorten, zonnepanelen, daken, dakgoten, rolluiken, trappen, terrassen en opritten in heel België.",
+    "telephone": "+3214718080",
+    "email": "info@thuisonderhoud.be",
+    "url": "https://thuisonderhoud.be",
+    "areaServed": {"@type": "Country", "name": "Belgium"},
+    "image": "https://thuisonderhoud.be/assets/hero-clean.jpg",
+    "priceRange": "€€"
+  }
+  </script>
 </head>
 <body>
   <nav>
@@ -478,7 +63,7 @@
           <div class="nav-item"><a href="#faq">FAQ</a></div>
           <div class="nav-item"><a href="contact.html">Contact</a></div>
         </div>
-        <a class="nav-cta" href="tel:+32000000000">Bel nu</a>
+        <a class="nav-cta" href="tel:+3214718080">Bel nu</a>
       </div>
     </div>
   </nav>
@@ -486,7 +71,7 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="hero-banner">
+        <div class="hero-banner" role="img" aria-label="Professionele reiniging en onderhoud van ramen, poorten en gevels">
           <div class="hero-copy">
             <span class="eyebrow">Reiniging en onderhoud rond uw woning</span>
             <h1>Van ramen tot oprit: alle onderhoudsdiensten op één adres.</h1>
@@ -508,47 +93,47 @@
         <div class="cards">
           <article class="card">
             <div class="card-kicker">Ramen &amp; lijsten</div>
-<a href="ramen-en-lijsten.html" style="color:inherit;"><h3>Ramen en raamlijsten reinigen →</h3></a>
+            <a href="ramen-en-lijsten.html" style="color:inherit;"><h3>Ramen en raamlijsten reinigen →</h3></a>
             <p>We reinigen binnenramen, buitenramen en de volledige raamlijsten streeploos. Kozijnen, dorpels en moeilijk bereikbare hoekjes nemen we mee. Het resultaat: helder glas en een strakke afwerking rond het hele raamwerk.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Deuren &amp; poorten</div>
-<a href="deuren-en-poorten.html" style="color:inherit;"><h3>Deuren en poorten reinigen →</h3></a>
+            <a href="deuren-en-poorten.html" style="color:inherit;"><h3>Deuren en poorten reinigen →</h3></a>
             <p>Voordeuren, binnendeuren, garagepoorten, schuifpoorten en draaipoorten worden grondig gereinigd. We verwijderen vuil, groene aanslag en vlekken van hout, metaal, kunststof of glas. Voegen en randen krijgen dezelfde aandacht. Na de reiniging brengen we een beschermlaag aan zodat het oppervlak langer proper blijft.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Zonnepanelen</div>
-<a href="zonnepanelen.html" style="color:inherit;"><h3>Zonnepanelen reinigen →</h3></a>
+            <a href="zonnepanelen.html" style="color:inherit;"><h3>Zonnepanelen reinigen →</h3></a>
             <p>Vuil, vogelpoep en fijn stof op zonnepanelen verlagen de opbrengst merkbaar. Wij reinigen elk paneel met osmosewater en zachte materialen, zonder druk die de coating beschadigt. Het rendement gaat terug omhoog en de panelen gaan langer mee.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Dak &amp; dakgoot</div>
-<a href="dak-en-dakgoot.html" style="color:inherit;"><h3>Dak en dakgoten reinigen →</h3></a>
+            <a href="dak-en-dakgoot.html" style="color:inherit;"><h3>Dak en dakgoten reinigen →</h3></a>
             <p>Mos op dakpannen houdt vocht vast en tast het materiaal aan. Volle dakgoten zorgen voor water dat verkeerd afloopt. We verwijderen mos, bladeren en ophopingen zodat regenwater weer correct wegstroomt en het dak droog en gezond blijft.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Trappen &amp; hallen</div>
-<a href="trappen-en-traphallen.html" style="color:inherit;"><h3>Trappen en traphallen reinigen →</h3></a>
+            <a href="trappen-en-traphallen.html" style="color:inherit;"><h3>Trappen en traphallen reinigen →</h3></a>
             <p>Gemeenschappelijke en private trappen, traphallen en inkomzones worden grondig schoongemaakt. Vlekken, stof en vuil verdwijnen. Dat maakt het geheel netter en veiliger, zeker in appartementsgebouwen en kantoren waar de indruk bij binnenkomst telt.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Rolluiken</div>
-<a href="rolluiken.html" style="color:inherit;"><h3>Rolluiken reinigen →</h3></a>
+            <a href="rolluiken.html" style="color:inherit;"><h3>Rolluiken reinigen →</h3></a>
             <p>Rolluiken vangen veel stof, insecten en vuil op in de lamellen en de geleiders. We reinigen ze lamel per lamel zodat ze weer soepel lopen en er verzorgd uitzien. Dat verlengt de levensduur en houdt de gevel proper.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Terras</div>
-<a href="terras-reinigen.html" style="color:inherit;"><h3>Terras reinigen →</h3></a>
+            <a href="terras-reinigen.html" style="color:inherit;"><h3>Terras reinigen →</h3></a>
             <p>Terrassen krijgen snel last van groene aanslag, vuil en donkere vlekken. Wij reinigen het oppervlak grondig zodat tegels, steen of hout opnieuw netjes ogen en veiliger beloopbaar worden.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Oprit</div>
-<a href="oprit-reinigen.html" style="color:inherit;"><h3>Oprit reinigen →</h3></a>
+            <a href="oprit-reinigen.html" style="color:inherit;"><h3>Oprit reinigen →</h3></a>
             <p>Een vervuilde oprit geeft meteen een slordige indruk. We verwijderen aanslag, bandensporen en opgehoopt vuil zodat de inkom van uw woning of pand terug proper en verzorgd oogt.</p>
           </article>
           <article class="card">
             <div class="card-kicker">Eerste kuis</div>
-<a href="eerste-kuis.html" style="color:inherit;"><h3>Eerste kuis →</h3></a>
+            <a href="eerste-kuis.html" style="color:inherit;"><h3>Eerste kuis →</h3></a>
             <p>Na werken, een verhuis of een lange periode zonder onderhoud zorgen wij voor een grondige eerste kuis. Zo start u opnieuw met een nette, frisse en verzorgde basis.</p>
           </article>
         </div>
@@ -604,7 +189,7 @@
           </div>
           <div class="faq-item">
             <strong>Kan ik een gratis offerte aanvragen?</strong>
-            <p>Ja. Stuur een korte beschrijving door met het type werk en de postcode. De offerte volgt snel daarna.</p>
+            <p>Ja. Vul het formulier hieronder in of stuur een mail naar <a href="mailto:info@thuisonderhoud.be" style="color:var(--accent);">info@thuisonderhoud.be</a>. De offerte volgt snel daarna.</p>
           </div>
         </div>
       </div>
@@ -616,19 +201,62 @@
           <div>
             <div class="section-label">Contact</div>
             <h2>Klaar om het te laten aanpakken?</h2>
-            <p>Beschrijf kort wat er gereinigd of onderhouden moet worden. De offerte volgt snel en vrijblijvend.</p>
-            <div class="hero-actions">
-              <a class="btn-primary" href="mailto:info@thuisonderhoud.be">Mail voor offerte</a>
-              <a class="btn-secondary" href="tel:+32000000000">Bel rechtstreeks</a>
+            <p>Vul het formulier in en we nemen binnen 24 uur contact op met een vrijblijvende offerte.</p>
+            <div class="contact-info">
+              <a href="mailto:info@thuisonderhoud.be" class="contact-link">
+                <span class="contact-link-label">E-mail</span>
+                info@thuisonderhoud.be
+              </a>
+              <a href="tel:+3214718080" class="contact-link">
+                <span class="contact-link-label">Telefoon</span>
+                014 71 80 80
+              </a>
             </div>
           </div>
-          <div class="contact-box">
-            <ul>
-              <li><strong>Wat stuur je best door?</strong> Welke dienst (ramen, poorten, dak, zonnepanelen, terras, oprit of eerste kuis), korte beschrijving, postcode en foto's als je die hebt.</li>
-              <li><strong>Voor welke aanvragen?</strong> Reiniging en onderhoud aan ramen, deuren, poorten, rolluiken, zonnepanelen, daken, dakgoten, trappen, traphallen, terrassen, opritten en eerste kuis.</li>
-              <li><strong>Regio</strong> Heel België — werkgebied wordt na contact afgestemd op uw locatie.</li>
-            </ul>
-          </div>
+          <form id="offerte-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" novalidate>
+            <input type="hidden" name="_subject" value="Nieuwe offerteaanvraag - thuisonderhoud.be">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="naam">Naam *</label>
+                <input type="text" id="naam" name="naam" required placeholder="Jan Janssen">
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required placeholder="jan@voorbeeld.be">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefoon">Telefoonnummer</label>
+                <input type="tel" id="telefoon" name="telefoon" placeholder="014 00 00 00">
+              </div>
+              <div class="form-group">
+                <label for="postcode">Postcode / gemeente *</label>
+                <input type="text" id="postcode" name="postcode" required placeholder="2000 Antwerpen">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dienst">Type aanvraag *</label>
+              <select id="dienst" name="dienst" required>
+                <option value="" disabled selected>Kies een dienst…</option>
+                <option value="Ramenreiniging">Ramenreiniging</option>
+                <option value="Deuren en poorten">Deuren en poorten</option>
+                <option value="Zonnepanelen">Zonnepanelen</option>
+                <option value="Dak en dakgoot">Dak en dakgoot</option>
+                <option value="Trappen en traphallen">Trappen en traphallen</option>
+                <option value="Rolluiken">Rolluiken</option>
+                <option value="Terras">Terras</option>
+                <option value="Oprit">Oprit</option>
+                <option value="Eerste kuis">Eerste kuis</option>
+                <option value="Andere">Andere</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="omschrijving">Korte omschrijving *</label>
+              <textarea id="omschrijving" name="omschrijving" required placeholder="Beschrijf kort wat er gereinigd of onderhouden moet worden…"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Stuur aanvraag</button>
+          </form>
         </div>
       </div>
     </section>
@@ -637,7 +265,9 @@
   <footer>
     <div class="container">thuisonderhoud.be — professionele reiniging en onderhoud</div>
   </footer>
+
   <script>
+    // Navigation
     const navToggle = document.querySelector('.nav-toggle');
     const navShell = document.querySelector('.nav-shell');
     const dropdownButton = document.querySelector('.nav-item.has-dropdown > button');
@@ -653,6 +283,35 @@
     if (dropdownButton && dropdownItem && window.innerWidth <= 980) {
       dropdownButton.addEventListener('click', () => {
         dropdownItem.classList.toggle('open');
+      });
+    }
+
+    // Contact form
+    const form = document.getElementById('offerte-form');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('.btn-submit');
+        btn.disabled = true;
+        btn.textContent = 'Bezig met verzenden…';
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.innerHTML = '<div class="form-success"><strong>Aanvraag ontvangen!</strong><p>We nemen binnen 24 uur contact op met uw vrijblijvende offerte.</p></div>';
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Stuur aanvraag';
+            alert('Er ging iets mis. Probeer opnieuw of mail naar info@thuisonderhoud.be.');
+          }
+        } catch {
+          btn.disabled = false;
+          btn.textContent = 'Stuur aanvraag';
+          alert('Geen verbinding. Probeer opnieuw of mail naar info@thuisonderhoud.be.');
+        }
       });
     }
   </script>
