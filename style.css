@@ -577,6 +577,9 @@ footer {
   .grid-2, .grid-3, .cards, .feature-band, .cta-wrap {
     grid-template-columns: 1fr;
   }
+  .hero-panel-window-cleaning {
+    background-position: 84% center;
+  }
   .nav-inner {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -660,6 +663,9 @@ footer {
     padding: 24px;
     border-radius: 20px;
     background-position: 70% center;
+  }
+  .hero-panel-window-cleaning {
+    background-position: 84% center;
   }
   .page-hero h1 {
     font-size: clamp(30px, 10vw, 44px);
