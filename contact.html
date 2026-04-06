@@ -15,31 +15,71 @@
 <nav><div class="container nav-inner"><a class="brand" href="index.html">thuisonderhoud.be</a><button class="nav-toggle" type="button" aria-label="Menu openen" aria-expanded="false">☰</button><div class="nav-shell"><div class="nav-links"><div class="nav-item"><a href="index.html">Home</a></div><div class="nav-item has-dropdown"><button type="button">Diensten</button><div class="nav-dropdown"><a href="ramen-en-lijsten.html">Ramenreiniging</a><a href="deuren-en-poorten.html">Deuren en poorten reiniging</a><a href="zonnepanelen.html">Zonnepanelen reinigen</a><a href="dak-en-dakgoot.html">Dak en dakgoot onderhoud</a><a href="trappen-en-traphallen.html">Trap en traphallen onderhoud</a><a href="rolluiken.html">Rolluiken onderhoud</a><a href="terras-reinigen.html">Terras reinigen</a><a href="oprit-reinigen.html">Oprit reinigen</a><a href="eerste-kuis.html">Eerste kuis</a><a href="contact.html">Offerte aanvragen</a></div></div><div class="nav-item"><a href="index.html#voordelen">Waarom wij</a></div><div class="nav-item"><a href="index.html#faq">FAQ</a></div><div class="nav-item"><a href="contact.html">Contact</a></div></div><a class="nav-cta" href="tel:+3214718080">Bel nu</a></div></div></nav>
 <main>
 <section class="page-hero"><div class="container"><div class="hero-panel" role="img" aria-label="Contacteer thuisonderhoud.be voor een vrijblijvende offerte"><span class="eyebrow">Contact</span><h1>Vraag hier uw offerte aan.</h1><p>Stuur kort door wat er gereinigd moet worden en waar u zich bevindt. Dan krijgt u snel een duidelijke offerte terug.</p><div class="hero-actions"><a class="btn-primary" href="#contact-form">Offerte aanvragen</a><a class="btn-secondary" href="index.html#diensten">Alle diensten</a></div></div></div></section>
-<section id="contact-form"><div class="container">
-<div class="grid-2">
+<section id="contact-form" class="contact-page-section"><div class="container">
+<div class="cta-wrap contact-page-wrap">
 <div>
 <div class="section-label">Rechtstreeks contact</div>
 <h2>Mail of bel — wat het makkelijkst is.</h2>
-<div style="margin-top:22px;display:grid;gap:18px;">
-<div class="card">
-<h3>E-mail</h3>
-<p><a href="mailto:info@thuisonderhoud.be" style="color:var(--accent);">info@thuisonderhoud.be</a></p>
+<p class="section-intro">Kies de snelste weg of stuur meteen uw aanvraag door via het formulier.</p>
+<div class="contact-info">
+<a href="mailto:info@thuisonderhoud.be" class="contact-link">
+<span class="contact-link-label">E-mail</span>
+info@thuisonderhoud.be
+</a>
+<a href="tel:+3214718080" class="contact-link">
+<span class="contact-link-label">Telefoon</span>
+014 71 80 80
+</a>
 </div>
-<div class="card">
-<h3>Telefoon</h3>
-<p><a href="tel:+3214718080" style="color:var(--accent);">014 71 80 80</a></p>
-</div>
-</div>
-</div>
-<div>
-<div class="section-label">Wat stuur je best mee</div>
-<h2>Hoe concreter, hoe sneller de offerte.</h2>
-<div style="margin-top:22px;display:grid;gap:14px;">
+<div style="margin-top:18px;display:grid;gap:14px;">
 <div class="card"><h3>Type dienst</h3><p>Ramen, poorten, zonnepanelen, dak, trappen of rolluiken — of een combinatie.</p></div>
 <div class="card"><h3>Korte beschrijving</h3><p>Wat is de situatie? Hoeveel ramen, welk type poort, hoe groot het dak?</p></div>
-<div class="card"><h3>Postcode en foto's</h3><p>De postcode helpt bij de planning. Foto's geven een sneller beeld van het werk.</p></div>
+<div class="card"><h3>Postcode en foto's</h3><p>De postcode helpt bij de planning. Foto's geven sneller een correct beeld van het werk.</p></div>
 </div>
 </div>
+<form id="offerte-form" action="mail.php" method="POST" class="contact-form" novalidate>
+<div class="form-row">
+<div class="form-group">
+<label for="naam">Naam *</label>
+<input type="text" id="naam" name="naam" required placeholder="Jan Janssen">
+</div>
+<div class="form-group">
+<label for="email">E-mail *</label>
+<input type="email" id="email" name="email" required placeholder="jan@voorbeeld.be">
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="telefoon">Telefoonnummer</label>
+<input type="tel" id="telefoon" name="telefoon" placeholder="014 00 00 00">
+</div>
+<div class="form-group">
+<label for="postcode">Postcode / gemeente *</label>
+<input type="text" id="postcode" name="postcode" required placeholder="2000 Antwerpen">
+</div>
+</div>
+<div class="form-group">
+<label for="dienst">Type aanvraag *</label>
+<select id="dienst" name="dienst" required>
+<option value="" disabled selected>Kies een dienst…</option>
+<option value="Ramenreiniging">Ramenreiniging</option>
+<option value="Deuren en poorten">Deuren en poorten</option>
+<option value="Zonnepanelen">Zonnepanelen</option>
+<option value="Dak en dakgoot">Dak en dakgoot</option>
+<option value="Trappen en traphallen">Trappen en traphallen</option>
+<option value="Rolluiken">Rolluiken</option>
+<option value="Terras">Terras</option>
+<option value="Oprit">Oprit</option>
+<option value="Eerste kuis">Eerste kuis</option>
+<option value="Andere">Andere</option>
+</select>
+</div>
+<div class="form-group">
+<label for="omschrijving">Korte omschrijving *</label>
+<textarea id="omschrijving" name="omschrijving" required placeholder="Beschrijf kort wat er gereinigd of onderhouden moet worden…"></textarea>
+</div>
+<button type="submit" class="btn-submit">Stuur aanvraag</button>
+</form>
 </div></div></section>
 <section><div class="container">
 <div class="section-label">Regio</div>
