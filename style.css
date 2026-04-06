@@ -700,6 +700,7 @@ footer {
   }
   .hero-panel-window-cleaning-image,
   .hero-panel-doors-image {
+    display: block;
     min-height: 250px;
     background-position: center center;
   }
