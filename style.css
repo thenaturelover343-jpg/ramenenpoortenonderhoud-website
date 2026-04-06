@@ -211,6 +211,9 @@ h1 {
 .hero-panel-terrace {
   background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/terras-hero.jpg') center center / cover no-repeat !important;
 }
+.hero-panel-driveway {
+  background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/oprit-hero.jpg') center center / cover no-repeat !important;
+}
 .hero-visible-img {
   display: none;
 }
@@ -718,6 +721,9 @@ footer {
   }
   .hero-panel-terrace {
     background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/terras-hero.jpg') center center / cover no-repeat !important;
+  }
+  .hero-panel-driveway {
+    background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/oprit-hero.jpg') center center / cover no-repeat !important;
   }
   .page-hero h1 {
     font-size: clamp(30px, 10vw, 44px);
