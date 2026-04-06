@@ -712,10 +712,11 @@ footer {
   }
   .hero-panel-doors {
     background: #050505;
-    background-image: none;
+    background-image: none !important;
     padding: 0;
     min-height: 0;
     gap: 0;
+    border-radius: 20px;
   }
   .hero-panel-doors .hero-visible-img {
     display: block;
