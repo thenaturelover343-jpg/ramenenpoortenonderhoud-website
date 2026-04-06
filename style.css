@@ -137,7 +137,6 @@ nav {
   position: relative;
   min-height: 620px;
   border-radius: 24px;
-  overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: 42px;
