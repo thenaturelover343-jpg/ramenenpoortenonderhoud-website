@@ -185,8 +185,10 @@ h1 {
 .page-hero-doors {
   padding: 28px 0 42px;
 }
-.hero-panel-window-cleaning-wrap,
-.hero-panel-doors-wrap {
+.hero-panel-doors {
+  background: linear-gradient(180deg, rgba(0,0,0,0.14) 0%, rgba(0,0,0,0.62) 72%, rgba(0,0,0,0.88) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat;
+}
+.hero-panel-window-cleaning-wrap {
   min-height: 420px;
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
@@ -200,12 +202,7 @@ h1 {
   min-height: 420px;
   background: url('assets/window-cleaning-hero.jpg') center center / cover no-repeat;
 }
-.hero-panel-doors-image {
-  min-height: 420px;
-  background: url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat;
-}
-.hero-panel-window-cleaning-content,
-.hero-panel-doors-content {
+.hero-panel-window-cleaning-content {
   min-height: 420px;
   padding: 42px;
   display: flex;
@@ -693,21 +690,21 @@ footer {
     border-radius: 20px;
     background-position: 70% center;
   }
-  .hero-panel-window-cleaning-wrap,
-  .hero-panel-doors-wrap {
+  .hero-panel-window-cleaning-wrap {
     grid-template-columns: 1fr;
     min-height: 0;
   }
-  .hero-panel-window-cleaning-image,
-  .hero-panel-doors-image {
+  .hero-panel-window-cleaning-image {
     display: block;
     min-height: 250px;
     background-position: center center;
   }
-  .hero-panel-window-cleaning-content,
-  .hero-panel-doors-content {
+  .hero-panel-window-cleaning-content {
     min-height: 0;
     padding: 24px;
+  }
+  .hero-panel-doors {
+    background-position: center center;
   }
   .page-hero h1 {
     font-size: clamp(30px, 10vw, 44px);
