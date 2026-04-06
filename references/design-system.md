@@ -4,12 +4,18 @@
 ## Industrie match
 Home services / onderhoud — lokale dienstverlener, vertrouwen en professionaliteit centraal.
 
+## Design referenties
+- **Apple** → clean minimalism, witruimte als designelement, strak sectie-ritme, één accentkleur
+- **Airbnb** → warmte, zachte multi-layer shadows, fotografie-first, genereuze border-radius, near-black tekst
+- **awesome-design-md** → DESIGN.md structuur (9 secties) als kwaliteitsstandaard
+
 ## Stijl
-**Clean Minimalism + Soft UI**
-- strakke lijnen, veel witruimte
-- zachte schaduwen in plaats van harde randen
-- rustige kleurpaletten die vertrouwen uitstralen
+**Clean Minimalism + Warm Service UI**
+- witruimte als designelement (Apple-stijl: elke sectie ademt)
+- zachte multi-layer schaduwen (Airbnb: border ring + soft blur + harder blur)
+- near-black tekst (#222222) in plaats van puur zwart — warmer, vriendelijker
 - fotografie-gedreven hero secties
+- één CTA-kleur als enige chromatic accent (Apple-principe)
 
 ## Kleurenpalet
 

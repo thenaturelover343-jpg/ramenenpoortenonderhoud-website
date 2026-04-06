@@ -22,7 +22,7 @@
       --font-body: 'Inter', system-ui, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-body); color: var(--color-text); line-height: 1.6; font-size: 17px; }
+    body { font-family: var(--font-body); color: #222222; line-height: 1.6; font-size: 17px; }
     h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; color: var(--color-primary); }
     a { text-decoration: none; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -36,27 +36,27 @@
     nav a:hover { opacity: .8; }
 
     /* HERO */
-    .hero { background: linear-gradient(135deg, var(--color-primary) 0%, #34495E 100%); color: #fff; padding: 80px 0 72px; text-align: center; }
-    .hero h1 { font-size: clamp(28px, 5vw, 44px); margin-bottom: 20px; color: #fff; }
+    .hero { background: linear-gradient(135deg, var(--color-primary) 0%, #34495E 100%); color: #fff; padding: 96px 0 80px; text-align: center; }
+    .hero h1 { font-size: clamp(28px, 5vw, 46px); margin-bottom: 24px; color: #fff; letter-spacing: -0.4px; line-height: 1.1; }
     .hero p { font-size: 18px; max-width: 620px; margin: 0 auto 32px; opacity: .9; }
-    .btn { display: inline-block; padding: 14px 32px; border-radius: 8px; font-family: var(--font-heading); font-weight: 600; font-size: 16px; cursor: pointer; transition: all .2s; }
+    .btn { display: inline-block; padding: 14px 32px; border-radius: 980px; font-family: var(--font-heading); font-weight: 600; font-size: 16px; cursor: pointer; transition: all .2s; }
     .btn-cta { background: var(--color-cta); color: #fff; }
     .btn-cta:hover { background: var(--color-cta-hover); transform: translateY(-1px); }
     .btn-outline { border: 2px solid #fff; color: #fff; margin-left: 12px; }
     .btn-outline:hover { background: rgba(255,255,255,.15); }
 
     /* SECTIONS */
-    section { padding: 64px 0; }
+    section { padding: 80px 0; }
     section:nth-child(even) { background: var(--color-surface); }
-    .section-title { font-size: 28px; text-align: center; margin-bottom: 40px; }
+    .section-title { font-size: 30px; text-align: center; margin-bottom: 48px; letter-spacing: -0.3px; }
 
     /* INTRO */
     .intro p { max-width: 700px; margin: 0 auto; text-align: center; font-size: 18px; color: var(--color-text-muted); }
 
     /* SERVICES */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .service-card { background: #fff; border-radius: 12px; padding: 32px 24px; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .2s; }
-    .service-card:hover { transform: translateY(-2px); }
+    .service-card { background: #fff; border-radius: 16px; padding: 32px 24px; box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.08) 0px 4px 8px; transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-3px); box-shadow: rgba(0,0,0,0.04) 0px 0px 0px 1px, rgba(0,0,0,0.06) 0px 4px 12px, rgba(0,0,0,0.12) 0px 8px 16px; }
     .service-card h3 { font-size: 20px; margin-bottom: 12px; }
     .service-card p { color: var(--color-text-muted); font-size: 15px; }
     .service-icon { font-size: 32px; margin-bottom: 16px; display: block; }
@@ -77,7 +77,7 @@
     .faq-a p { padding: 0 0 20px; color: var(--color-text-muted); font-size: 15px; }
 
     /* CTA BLOCK */
-    .cta-block { background: var(--color-primary); color: #fff; text-align: center; padding: 64px 0; }
+    .cta-block { background: var(--color-primary); color: #fff; text-align: center; padding: 80px 0; }
     .cta-block h2 { color: #fff; font-size: 28px; margin-bottom: 20px; }
 
     /* CONTACT */
