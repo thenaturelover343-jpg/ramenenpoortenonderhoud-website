@@ -172,6 +172,13 @@ nav {
 }
 
 section { padding: 42px 0; }
+.section-alt {
+  padding-top: 18px;
+}
+.section-compact {
+  padding-top: 18px;
+  padding-bottom: 54px;
+}
 .section-label {
   color: var(--muted);
   font-size: 13px;
@@ -334,5 +341,8 @@ footer {
   .hero-panel {
     min-height: 360px;
     padding: 28px;
+  }
+  .section-compact {
+    padding-bottom: 42px;
   }
 }
