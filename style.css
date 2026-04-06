@@ -181,6 +181,9 @@ h1 {
   box-shadow: var(--ring), var(--shadow-float);
   border: 1px solid rgba(255,255,255,0.08);
 }
+.hero-panel-window-cleaning {
+  background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.56) 72%, rgba(0,0,0,0.82) 100%), url('assets/window-cleaning-hero.jpg') center center / cover no-repeat;
+}
 .eyebrow {
   display: inline-block;
   margin-bottom: 18px;
