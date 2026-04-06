@@ -127,7 +127,29 @@ nav {
 }
 
 .page-hero {
-  padding: 72px 0 48px;
+  padding: 28px 0 42px;
+}
+.hero-panel {
+  min-height: 420px;
+  border-radius: 24px;
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.74) 78%, rgba(0,0,0,0.88) 100%), url('assets/hero-clean.jpg') center center / cover no-repeat;
+  box-shadow: var(--ring), var(--shadow-float);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.12);
+  color: #f1f1f1;
+  font-size: 13px;
+  box-shadow: var(--ring);
+  width: fit-content;
 }
 .page-hero h1 {
   font-size: clamp(36px, 6vw, 64px);
@@ -139,8 +161,14 @@ nav {
 .page-hero p {
   margin-top: 18px;
   max-width: 660px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.84);
   font-size: 18px;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
 }
 
 section { padding: 42px 0; }
@@ -302,5 +330,9 @@ footer {
     text-align: center;
     display: inline-flex;
     justify-content: center;
+  }
+  .hero-panel {
+    min-height: 360px;
+    padding: 28px;
   }
 }
