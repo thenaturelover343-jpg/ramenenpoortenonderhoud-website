@@ -1,274 +1,485 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onderhoud van ramen en poorten | Professioneel nazicht en herstel in België</title>
-  <meta name="description" content="Laat uw ramen en poorten vakkundig onderhouden. Nazicht, afstelling en herstelling voor particulieren en bedrijven in België. Vraag een offerte aan.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thuisonderhoud | Onderhoud van ramen en poorten</title>
+  <meta name="description" content="Professioneel onderhoud van ramen en poorten. Snel ingepland, correct uitgevoerd en helder opgevolgd." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --color-primary: #2C3E50;
-      --color-secondary: #ECF0F1;
-      --color-cta: #E67E22;
-      --color-cta-hover: #D35400;
-      --color-bg: #FFFFFF;
-      --color-surface: #F8F9FA;
-      --color-text: #2D3436;
-      --color-text-muted: #636E72;
-      --color-border: #DFE6E9;
-      --font-heading: 'Poppins', system-ui, sans-serif;
-      --font-body: 'Inter', system-ui, sans-serif;
+      --bg: #000000;
+      --surface: #090909;
+      --text: #ffffff;
+      --muted: #a6a6a6;
+      --accent: #0099ff;
+      --accent-ring: rgba(0, 153, 255, 0.15);
+      --frost: rgba(255, 255, 255, 0.1);
+      --frost-hover: rgba(255, 255, 255, 0.16);
+      --radius-card: 14px;
+      --radius-pill: 999px;
+      --container: 1180px;
+      --shadow-float: rgba(255, 255, 255, 0.1) 0px 0.5px 0px 0.5px, rgba(0, 0, 0, 0.25) 0px 10px 30px;
+      --ring: rgba(0, 153, 255, 0.15) 0px 0px 0px 1px;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-body); color: #222222; line-height: 1.6; font-size: 17px; }
-    h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; color: var(--color-primary); }
-    a { text-decoration: none; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-    /* NAV */
-    nav { background: var(--color-primary); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
-    nav .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    nav .logo { color: #fff; font-family: var(--font-heading); font-size: 20px; font-weight: 600; }
-    nav ul { list-style: none; display: flex; gap: 24px; flex-wrap: wrap; }
-    nav a { color: #fff; font-size: 15px; transition: opacity .2s; }
-    nav a:hover { opacity: .8; }
-
-    /* HERO */
-    .hero { background: linear-gradient(135deg, var(--color-primary) 0%, #34495E 100%); color: #fff; padding: 96px 0 80px; text-align: center; }
-    .hero h1 { font-size: clamp(28px, 5vw, 46px); margin-bottom: 24px; color: #fff; letter-spacing: -0.4px; line-height: 1.1; }
-    .hero p { font-size: 18px; max-width: 620px; margin: 0 auto 32px; opacity: .9; }
-    .btn { display: inline-block; padding: 14px 32px; border-radius: 980px; font-family: var(--font-heading); font-weight: 600; font-size: 16px; cursor: pointer; transition: all .2s; }
-    .btn-cta { background: var(--color-cta); color: #fff; }
-    .btn-cta:hover { background: var(--color-cta-hover); transform: translateY(-1px); }
-    .btn-outline { border: 2px solid #fff; color: #fff; margin-left: 12px; }
-    .btn-outline:hover { background: rgba(255,255,255,.15); }
-
-    /* SECTIONS */
-    section { padding: 80px 0; }
-    section:nth-child(even) { background: var(--color-surface); }
-    .section-title { font-size: 30px; text-align: center; margin-bottom: 48px; letter-spacing: -0.3px; }
-
-    /* INTRO */
-    .intro p { max-width: 700px; margin: 0 auto; text-align: center; font-size: 18px; color: var(--color-text-muted); }
-
-    /* SERVICES */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .service-card { background: #fff; border-radius: 16px; padding: 32px 24px; box-shadow: rgba(0,0,0,0.02) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 2px 6px, rgba(0,0,0,0.08) 0px 4px 8px; transition: transform .2s, box-shadow .2s; }
-    .service-card:hover { transform: translateY(-3px); box-shadow: rgba(0,0,0,0.04) 0px 0px 0px 1px, rgba(0,0,0,0.06) 0px 4px 12px, rgba(0,0,0,0.12) 0px 8px 16px; }
-    .service-card h3 { font-size: 20px; margin-bottom: 12px; }
-    .service-card p { color: var(--color-text-muted); font-size: 15px; }
-    .service-icon { font-size: 32px; margin-bottom: 16px; display: block; }
-
-    /* TRUST */
-    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center; }
-    .trust-item { padding: 24px; }
-    .trust-item .icon { font-size: 28px; margin-bottom: 12px; display: block; }
-    .trust-item h3 { font-size: 17px; margin-bottom: 8px; }
-    .trust-item p { font-size: 14px; color: var(--color-text-muted); }
-
-    /* FAQ */
-    .faq-item { border-bottom: 1px solid var(--color-border); max-width: 700px; margin: 0 auto; }
-    .faq-q { padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-heading); font-weight: 500; font-size: 17px; }
-    .faq-q::after { content: '+'; font-size: 22px; color: var(--color-cta); transition: transform .2s; }
-    .faq-q.open::after { transform: rotate(45deg); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-    .faq-a p { padding: 0 0 20px; color: var(--color-text-muted); font-size: 15px; }
-
-    /* CTA BLOCK */
-    .cta-block { background: var(--color-primary); color: #fff; text-align: center; padding: 80px 0; }
-    .cta-block h2 { color: #fff; font-size: 28px; margin-bottom: 20px; }
-
-    /* CONTACT */
-    .contact-form { max-width: 560px; margin: 0 auto; }
-    .contact-form label { display: block; font-weight: 500; margin-bottom: 6px; margin-top: 16px; font-size: 15px; }
-    .contact-form input, .contact-form select, .contact-form textarea {
-      width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: 8px;
-      font-family: var(--font-body); font-size: 15px; background: #fff;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
-    .contact-form textarea { height: 100px; resize: vertical; }
-    .contact-form .btn { margin-top: 24px; width: 100%; text-align: center; border: none; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(100% - 32px, var(--container)); margin: 0 auto; }
 
-    /* FOOTER */
-    footer { background: var(--color-primary); color: rgba(255,255,255,.7); text-align: center; padding: 32px 0; font-size: 14px; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(0,0,0,0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 16px;
+    }
+    .brand {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .nav-cta {
+      padding: 11px 18px;
+      border-radius: var(--radius-pill);
+      background: #fff;
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-    @media (max-width: 600px) {
-      nav ul { gap: 14px; }
-      .btn-outline { margin-left: 0; margin-top: 8px; }
-      .hero { padding: 56px 0 48px; }
-      .hero .btn { display: block; width: 100%; margin: 8px 0; }
+    .hero {
+      padding: 84px 0 42px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--frost);
+      color: var(--muted);
+      font-size: 13px;
+      box-shadow: var(--ring);
+    }
+    h1 {
+      font-size: clamp(42px, 8vw, 88px);
+      line-height: 0.92;
+      letter-spacing: -3px;
+      font-weight: 700;
+      max-width: 760px;
+    }
+    .hero p {
+      margin-top: 22px;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .btn-primary,
+    .btn-secondary {
+      padding: 14px 22px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+    .btn-primary {
+      background: #fff;
+      color: #000;
+    }
+    .btn-secondary {
+      background: var(--frost);
+      color: #fff;
+      box-shadow: var(--ring);
+    }
+    .btn-secondary:hover { background: var(--frost-hover); }
+
+    .hero-card {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--ring), var(--shadow-float);
+    }
+    .hero-visual {
+      aspect-ratio: 16 / 11;
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at top right, rgba(0,153,255,0.18), transparent 34%),
+        linear-gradient(160deg, #111111 0%, #050505 100%);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(12px);
+    }
+    .hero-visual::before {
+      width: 220px;
+      height: 220px;
+      right: -30px;
+      top: -40px;
+      background: rgba(0,153,255,0.22);
+    }
+    .hero-visual::after {
+      width: 180px;
+      height: 180px;
+      left: 24px;
+      bottom: 18px;
+      background: rgba(255,255,255,0.06);
+    }
+    .visual-panel {
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 16px;
+      backdrop-filter: blur(6px);
+    }
+    .visual-panel h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: -0.4px;
+    }
+    .visual-panel p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    section {
+      padding: 42px 0;
+    }
+    .section-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    h2 {
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 0.96;
+      letter-spacing: -2px;
+      font-weight: 700;
+      max-width: 820px;
+      margin-bottom: 16px;
+    }
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 22px;
+      box-shadow: var(--ring);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .card-kicker {
+      color: var(--accent);
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .card h3 {
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .feature-band {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .feature-pill {
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      box-shadow: var(--ring);
+    }
+    .feature-pill strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+      letter-spacing: -0.3px;
+    }
+    .feature-pill span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--ring);
+    }
+    .faq-item strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+    .faq-item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .cta-wrap {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--ring), var(--shadow-float);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .cta-wrap p { color: var(--muted); font-size: 16px; margin-top: 12px; }
+
+    .contact-box {
+      background: rgba(255,255,255,0.04);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .contact-box ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .contact-box li strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cta-wrap,
+      .cards,
+      .feature-band {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+      h1 { letter-spacing: -2px; }
+      h2 { letter-spacing: -1.4px; }
     }
   </style>
 </head>
 <body>
-
-<nav>
-  <div class="container">
-    <span class="logo">Ramen & Poorten Onderhoud</span>
-    <ul>
-      <li><a href="#diensten">Diensten</a></li>
-      <li><a href="#voordelen">Voordelen</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="container">
-    <h1>Uw ramen en poorten verdienen goed onderhoud</h1>
-    <p>Een poort die hapert of een raam dat niet meer goed sluit — daar wil je snel van af. Wij komen langs, stellen alles af en zorgen dat het weer werkt zoals het hoort.</p>
-    <a href="#contact" class="btn btn-cta">Vraag een offerte aan</a>
-    <a href="#diensten" class="btn btn-outline">Bekijk onze diensten</a>
-  </div>
-</section>
-
-<section id="intro">
-  <div class="container intro">
-    <p>Stroef draaiende ramen of een poort die blijft hangen? Hoe langer je wacht, hoe duurder de herstelling. Laat het op tijd nakijken en bespaar jezelf de kopzorgen.</p>
-  </div>
-</section>
-
-<section id="diensten">
-  <div class="container">
-    <h2 class="section-title">Onze diensten</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-icon">🪟</span>
-        <h3>Ramen onderhouden</h3>
-        <p>We controleren scharnieren, afdichtingen en sluitwerk. Hout, aluminium of PVC — alles wordt nagelopen en bijgesteld waar nodig.</p>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">thuisonderhoud.be</div>
+      <div class="nav-links">
+        <a href="#diensten">Diensten</a>
+        <a href="#voordelen">Voordelen</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="service-card">
-        <span class="service-icon">🚪</span>
-        <h3>Poorten onderhouden</h3>
-        <p>Garagepoort, schuifpoort, draaipoort of industrieel — we smeren, stellen af en vervangen versleten onderdelen.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🔧</span>
-        <h3>Herstellingen</h3>
-        <p>Kapot scharnier, vastgelopen rail of een mechanisme dat blokkeert? We lossen het ter plaatse op.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">📋</span>
-        <h3>Nazicht en inspectie</h3>
-        <p>We bekijken alles van dichtbij, testen de werking en geven je een kort verslag met wat er moet gebeuren.</p>
-      </div>
+      <a class="nav-cta" href="#contact">Offerte aanvragen</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section id="voordelen">
-  <div class="container">
-    <h2 class="section-title">Waarom kiezen voor ons</h2>
-    <div class="trust-grid">
-      <div class="trust-item">
-        <span class="icon">⏱️</span>
-        <h3>Jaren langer meegaan</h3>
-        <p>Wie regelmatig laat nakijken, vervangt minder snel. Zo simpel is het.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Modern onderhoud voor ramen en poorten</span>
+          <h1>Onderhoud dat uw woning weer juist laat werken.</h1>
+          <p>Ramen die stroef draaien, een poort die blokkeert of onderdelen die slijten: wij pakken het snel en correct aan. Duidelijke afspraken, nette uitvoering en geen onnodige omwegen.</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#contact">Vraag een offerte aan</a>
+            <a class="btn-secondary" href="#diensten">Bekijk diensten</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-visual">
+            <div class="visual-panel">
+              <h3>Snel ingepland. Correct uitgevoerd.</h3>
+              <p>Onderhoud, afstelling en gerichte herstellingen voor ramen, garagepoorten en toegangspoorten.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="trust-item">
-        <span class="icon">✅</span>
-        <h3>Minder pech</h3>
-        <p>Op tijd onderhouden betekent minder kans op een poort die er 's ochtends niet open gaat.</p>
+    </section>
+
+    <section id="diensten">
+      <div class="container">
+        <div class="section-label">Diensten</div>
+        <h2>Geen vage beloftes. Gewoon degelijk thuisonderhoud.</h2>
+        <p class="section-intro">De focus ligt op ramen en poorten die terug soepel, veilig en netjes moeten functioneren. Gericht werk, helder advies en een afwerking die professioneel aanvoelt.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-kicker">Ramen</div>
+            <h3>Onderhoud van ramen</h3>
+            <p>Controle van scharnieren, sluitwerk, afdichtingen en afstelling. Voor houten ramen, aluminium ramen en PVC-profielen.</p>
+          </article>
+          <article class="card">
+            <div class="card-kicker">Poorten</div>
+            <h3>Onderhoud van poorten</h3>
+            <p>Garagepoorten, schuifpoorten en draaipoorten worden nagekeken, gesmeerd en opnieuw correct afgesteld.</p>
+          </article>
+          <article class="card">
+            <div class="card-kicker">Herstel</div>
+            <h3>Kleine herstellingen</h3>
+            <p>Bij slijtage of defecten grijpen we gericht in zodat grotere schade en extra kosten vermeden worden.</p>
+          </article>
+          <article class="card">
+            <div class="card-kicker">Nazicht</div>
+            <h3>Inspectie en advies</h3>
+            <p>Je krijgt een duidelijk overzicht van wat dringend is, wat later kan en welke ingreep het meeste verschil maakt.</p>
+          </article>
+        </div>
       </div>
-      <div class="trust-item">
-        <span class="icon">🏢</span>
-        <h3>Verzorgd beeld</h3>
-        <p>Scheve ramen of een roestige poort vallen op — en niet op de goede manier.</p>
+    </section>
+
+    <section id="voordelen">
+      <div class="container">
+        <div class="section-label">Waarom kiezen</div>
+        <h2>Modern, strak en professioneel. Zoals de dienst zelf.</h2>
+        <p class="section-intro">Geen overbodige stappen. Het doel is simpel: ramen en poorten terug in orde zetten en zorgen dat alles weer doet wat het moet doen.</p>
+        <div class="feature-band">
+          <div class="feature-pill">
+            <strong>Minder storingen</strong>
+            <span>Preventief onderhoud voorkomt blokkerende poorten en slecht sluitende ramen.</span>
+          </div>
+          <div class="feature-pill">
+            <strong>Snellere aanpak</strong>
+            <span>Duidelijke afspraak, gerichte uitvoering en geen tijdverlies ter plaatse.</span>
+          </div>
+          <div class="feature-pill">
+            <strong>Verzorgde uitstraling</strong>
+            <span>Goed werkende ramen en poorten maken het geheel direct netter.</span>
+          </div>
+          <div class="feature-pill">
+            <strong>Heldere opvolging</strong>
+            <span>Je weet wat gebeurd is, wat nog nodig is en waar je aan toe bent.</span>
+          </div>
+        </div>
       </div>
-      <div class="trust-item">
-        <span class="icon">📞</span>
-        <h3>Vlotte afhandeling</h3>
-        <p>We spreken een datum af, komen op tijd en doen wat beloofd is. Geen gedoe.</p>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-label">FAQ</div>
+        <h2>Veelgestelde vragen</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <strong>Voor wie is deze dienst?</strong>
+            <p>Voor particulieren, verhuurders, beheerders en bedrijven die ramen of poorten correct willen laten onderhouden.</p>
+          </div>
+          <div class="faq-item">
+            <strong>Doen jullie ook herstellingen?</strong>
+            <p>Ja. Kleine en gerichte herstellingen nemen we meteen mee wanneer dat zinvol is.</p>
+          </div>
+          <div class="faq-item">
+            <strong>Welke types poorten nemen jullie mee?</strong>
+            <p>Garagepoorten, schuifpoorten, draaipoorten en andere veelvoorkomende systemen rond woningen en gebouwen.</p>
+          </div>
+          <div class="faq-item">
+            <strong>Kan ik eerst een offerte aanvragen?</strong>
+            <p>Ja. Je beschrijft kort wat er nodig is en daarna volgt een gerichte inschatting of voorstel.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="faq">
-  <div class="container">
-    <h2 class="section-title">Veelgestelde vragen</h2>
-    <div class="faq-item">
-      <div class="faq-q">Voor wie is deze service?</div>
-      <div class="faq-a"><p>Iedereen met ramen of poorten die onderhoud nodig hebben — of je nu een eigen woning hebt, een bedrijfspand beheert of een appartementsgebouw onderhoudt.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Welke types ramen onderhouden jullie?</div>
-      <div class="faq-a"><p>Hout, aluminium, PVC en combinatieprofielen. Draai-kip, schuiframen, klapramen — maakt niet uit welk type.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Welke types poorten onderhouden jullie?</div>
-      <div class="faq-a"><p>Sectionaalpoorten, kantelpoorten, rolpoorten, schuifpoorten, draaipoorten en ook grotere industriële installaties.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wat kost een onderhoud?</div>
-      <div class="faq-a"><p>Hangt af van wat er moet gebeuren. Stuur je gegevens door en je krijgt een heldere prijs — geen verrassingen achteraf.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Doen jullie ook herstellingen?</div>
-      <div class="faq-a"><p>Ja. Kleine herstellingen doen we meteen. Is de schade groter? Dan zeggen we dat eerlijk en bespreken we de opties.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Werken jullie ook voor bedrijven?</div>
-      <div class="faq-a"><p>Zeker. Kantoren, magazijnen, winkels, scholen — we komen langs waar nodig.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Geven jullie een rapport na inspectie?</div>
-      <div class="faq-a"><p>Ja. Na elke inspectie krijg je een kort verslag: wat is er vastgesteld, wat raden we aan en wat kan wachten.</p></div>
-    </div>
-  </div>
-</section>
+    <section id="contact">
+      <div class="container">
+        <div class="cta-wrap">
+          <div>
+            <div class="section-label">Contact</div>
+            <h2>Klaar om het te laten aanpakken?</h2>
+            <p>Stuur de situatie kort door. Dan kan de aanvraag snel beoordeeld en ingepland worden.</p>
+            <div class="hero-actions">
+              <a class="btn-primary" href="mailto:info@thuisonderhoud.be">Mail voor offerte</a>
+              <a class="btn-secondary" href="tel:+32000000000">Bel rechtstreeks</a>
+            </div>
+          </div>
+          <div class="contact-box">
+            <ul>
+              <li><strong>Wat stuur je best door?</strong> Type raam of poort, korte beschrijving, postcode en enkele foto's indien beschikbaar.</li>
+              <li><strong>Voor welke aanvragen?</strong> Onderhoud, afstelling, nazicht en kleine herstellingen.</li>
+              <li><strong>Regio</strong> Werkgebied wordt verder afgestemd op de actieve zones van thuisonderhoud.be.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<div class="cta-block">
-  <div class="container">
-    <h2>Tijd voor een onderhoudsbeurt?</h2>
-    <a href="#contact" class="btn btn-cta">Vraag nu je offerte aan</a>
-  </div>
-</div>
-
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact</h2>
-    <form class="contact-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=\'text-align:center;padding:40px;font-size:18px;color:#27AE60\'>Bedankt voor je aanvraag. We nemen binnen 24 uur contact op.</p>';">
-      <label for="naam">Naam *</label>
-      <input type="text" id="naam" required>
-      <label for="email">E-mail *</label>
-      <input type="email" id="email" required>
-      <label for="tel">Telefoonnummer</label>
-      <input type="tel" id="tel">
-      <label for="type">Type aanvraag</label>
-      <select id="type">
-        <option>Onderhoud ramen</option>
-        <option>Onderhoud poorten</option>
-        <option>Herstelling</option>
-        <option>Nazicht / inspectie</option>
-        <option>Andere</option>
-      </select>
-      <label for="postcode">Postcode / gemeente *</label>
-      <input type="text" id="postcode" required>
-      <label for="bericht">Korte omschrijving *</label>
-      <textarea id="bericht" required></textarea>
-      <button type="submit" class="btn btn-cta">Verstuur aanvraag</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>&copy; 2026 Ramen & Poorten Onderhoud. Alle rechten voorbehouden.</p>
-  </div>
-</footer>
-
-<script>
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const a = q.nextElementSibling;
-    const open = q.classList.toggle('open');
-    a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
-  });
-});
-</script>
-
+  <footer>
+    <div class="container">thuisonderhoud.be — preview in Framer-stijl</div>
+  </footer>
 </body>
 </html>
