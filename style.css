@@ -186,7 +186,7 @@ h1 {
   padding: 28px 0 42px;
 }
 .hero-panel-doors {
-  background: linear-gradient(180deg, rgba(0,0,0,0.14) 0%, rgba(0,0,0,0.62) 72%, rgba(0,0,0,0.88) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat !important;
+  background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 45%, rgba(0,0,0,0.08) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat !important;
 }
 .hero-visible-img {
   display: none;
@@ -711,7 +711,7 @@ footer {
     padding: 24px;
   }
   .hero-panel-doors {
-    background: linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.68) 68%, rgba(0,0,0,0.92) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat !important;
+    background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.62) 65%, rgba(0,0,0,0.90) 100%), url('assets/deuren-poorten-hero.jpg') center center / cover no-repeat !important;
   }
   .page-hero h1 {
     font-size: clamp(30px, 10vw, 44px);
